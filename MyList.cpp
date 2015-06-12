@@ -23,7 +23,7 @@ public:
 	}
 	MyList(int num, const T &item); //This function put num into the list t times.
 	MyList(const MyList &l); //This function copies another MyList.
-    MyList(T* arr, int len); //This function constructs MyList with the first len numbers of arr.
+    	MyList(T* arr, int len); //This function constructs MyList with the first len numbers of arr.
 
 	void push(const T &item); //This function adds the item to the last of the list. 
 	T pop(); //This function erases the last element of MyList and returns the value of it.
