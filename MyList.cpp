@@ -23,7 +23,7 @@ public:
 	}
 	MyList(int num, const T &item); //This function put num into the list t times.
 	MyList(const MyList &l); //This function copies another MyList.
-    	MyList(T* arr, int len); //This function constructs MyList with the first len numbers of arr.
+    MyList(T* arr, int len); //This function constructs MyList with the first len numbers of arr.
 
 	void push(const T &item); //This function adds the item to the last of the list. 
 	T pop(); //This function erases the last element of MyList and returns the value of it.
@@ -85,7 +85,7 @@ MyList<T>::MyList(int num, const T &item){
 template <class T> 	
 MyList<T>::MyList(const MyList &l){
 	size = l.size;
-		element = l.element;
+	element = l.element;
 	a = new T [size];
 	for(int i = 0; i < element; ++i) a[i] = l.a[i];
 }
@@ -219,7 +219,7 @@ MyList<T> & MyList<T>::operator = (const MyList &l){
 	if (this == &l) return *this;
 	size = l.size;
 	element = l.element;
-	a =  new int [size];
+	a =  new T [size];
 	for(int i = 0; i<element; ++i) a[i] = l.a[i];
 	return *this;
 }
@@ -307,7 +307,7 @@ template <class T>
 void MyList<T>::reverse(){
 	if(element != 0){
 		int *b;
-		b = new int [size];
+		b = new T [size];
 		for(int i = 0; i < element; ++i) b[i] = a[element-i-1];
 		delete [] a;
 		a = b;
