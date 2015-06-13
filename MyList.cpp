@@ -39,7 +39,7 @@ public:
 	friend MyList<T> operator + (const MyList<T> &l1, const MyList<T> &l2){ //This operator combines two lists together.
 		int *a;
 		int len = l1.element+l2.element;
-		a = new int [len];
+		a = new T [len];
 		for(int i = 0; i < l1.element; ++i) a[i] = l1.a[i];
 		for(int i = l1.element; i < len; ++i) a[i] = l2.a[i-l1.element];
 		MyList<T> list(a,len);
